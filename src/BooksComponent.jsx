@@ -12,24 +12,19 @@ class BooksComponent extends Component {
 
   render() {
     return (
-      <Container fluid>
+      <Container>
         <Row>
-          <Card
-            className="col col-md-12 flex-row flex-wrap "
-            style={{ width: 'rem' }}
-          >
+          <Card className="col col-md-12 flex-row flex-wrap border border-black ">
             {fantasy.map((book) => {
               return (
-                <>
-                  <Card.Body className="col col-md-4 ">
-                    <Card.Title className="mt-1">{book.title}</Card.Title>
-                    <Card.Img src={book.img} />
-                    <Button variant="primary" className="mt-1">
-                      {book.price}€
-                    </Button>
-                    <Card.Text>{book.category}</Card.Text>
-                  </Card.Body>
-                </>
+                <Card.Body className=" d-flex flex-column   align-items-center  col col-md-3 border border-subtle m-2  ">
+                  <Card.Title className="mt-1">{book.title}</Card.Title>
+                  <Card.Img src={book.img} className="h-50" />
+                  <Button variant="primary" className="mt-1">
+                    {book.price}€
+                  </Button>
+                  <Card.Text>{book.category}</Card.Text>
+                </Card.Body>
               );
             })}
           </Card>

@@ -8,16 +8,10 @@ function App() {
   return (
     <>
       <Welcome />
-      <nav>
-        <MyNav />
-      </nav>
 
-      <main>
-        <BooksComponent />
-      </main>
-      <footer>
-        <FooterComponent />
-      </footer>
+      <MyNav />
+
+      <FooterComponent />
     </>
   );
 }
